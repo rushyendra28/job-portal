@@ -1,0 +1,193 @@
+/* index.css */
+
+:root {
+  --gradient-primary: linear-gradient(135deg, #184e68 0%, #57ca85 100%);
+  --gradient-secondary: linear-gradient(135deg, #42275a 0%, #734b6d 100%);
+  --color-primary: #184e68;
+  --color-secondary: #57ca85;
+  --color-background: #f0f4f8;
+  --color-text: #2d3748;
+  --color-card: #ffffff;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #1d4ed8;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.toggle-btn {
+  background: none;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.navbar {
+  background: var(--gradient-primary);
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: white !important;
+  transform: translateY(-1px);
+}
+
+.card {
+  background: var(--color-card);
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(87, 202, 133, 0.2);
+}
+
+.form-control {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(87, 202, 133, 0.1);
+}
+
+.section-title {
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.table thead th {
+  background: var(--gradient-secondary);
+  color: white;
+  font-weight: 600;
+  border: none;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(87, 202, 133, 0.05);
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Dark mode styles */
+body.dark {
+  --color-background: #1a202c;
+  --color-text: #e2e8f0;
+  --color-card: #2d3748;
+}
+
+body.dark a {
+  color: #93c5fd;
+}
+
+body.dark header {
+  background-color: #111827;
+  border-color: #374151;
+}
+
+body.dark .toggle-btn {
+  border-color: #4b5563;
+}
+
+body.dark .toggle-btn:hover {
+  background-color: #374151;
+}
+
+body.dark .card {
+  background: var(--color-card);
+  border: 1px solid #4a5568;
+}
+
+body.dark .form-control {
+  background-color: #2d3748;
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+body.dark .table tbody {
+  background-color: var(--color-card);
+  color: var(--color-text);
+}
